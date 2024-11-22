@@ -11,7 +11,7 @@
 .vp-doc > div *:not(object):not(embed) a[target="_blank"]:not([href*="from-es.github.io"]):not([href$=".jpg"]):not([href$=".png"]):not([href$=".gif"]):hover::after {
 	all: initial;
 
-	content: url('/src//img/external-link.png');
+	content: url('/src/img/external-link.png');
 	background-color: #f9f9f9; /* common.css .entry の background-color と同じ指定にする */
 	text-decoration: none;
 
