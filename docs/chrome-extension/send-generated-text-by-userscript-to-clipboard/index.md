@@ -29,7 +29,7 @@ head:
 
 <!-- Add, Social Button -->
 <script setup>
-	import { addSocialButton } from "/src/js/addSocialButton.mjs";
+	import { addSocialButton } from "../../src/js/addSocialButton.mjs";
 
 	const SocialButton = addSocialButton();
 </script>
