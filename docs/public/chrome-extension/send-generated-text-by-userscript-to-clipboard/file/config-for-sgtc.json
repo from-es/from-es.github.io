@@ -1,0 +1,193 @@
+{
+	"ContextMenu": {
+		"visible": true
+	},
+	"Debug": {
+		"logging": false,
+		"timecoordinate": "GMT",
+		"timestamp": true
+	},
+	"Editor": {
+		"FontSize": 14,
+		"Indent": {
+			"size": 4,
+			"type": "tab"
+		}
+	},
+	"Information": {
+		"date": {
+			"iso8601": "2024-09-01T00:00:0.000Z",
+			"unixtime": 1725148800000
+		},
+		"name": "S.G.T.C.",
+		"version": "0.13.3"
+	},
+	"Notification": {
+		"SoundEffect": {
+			"enable": true
+		},
+		"Text": {
+			"enable": true,
+			"timeout": 3,
+			"type": "Flash Message"
+		}
+	},
+	"PopupMenu": {
+		"FontSize": 16,
+		"OnClickClose": {
+			"enable": true,
+			"timeout": 0.5
+		},
+		"WidthSize": 384
+	},
+	"UserScript": {
+		"codes": [
+			{
+				"color": "#4caf50",
+				"enabled": true,
+				"id": "fwyRDkUZ6aCAswHYRMds9K8hXqVo5jTD",
+				"name": "リンクを作成",
+				"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst _title = batchOfReplaceWork(title, url, replaceWordList);\n\tconst result = `<a href=\"${url}\" target=\"_blank\" rel=\"noopener\">${_title}</a>`;\n\t\n\treturn result;\n}",
+				"type": "script"
+			},
+			{
+				"color": "#4caf50",
+				"enabled": true,
+				"id": "K1c3m6RkPpUJCFwmenxnyAC5pih4m5jr",
+				"name": "リンクを作成（記事）",
+				"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst _title = batchOfReplaceWork(title, url, replaceWordList);\n\tconst result = `<br>\\n◆ <a href=\"${url}\" target=\"_blank\" rel=\"noopener\">${_title}</a><br>\\n\\n`;\n\n\treturn result;\n}",
+				"type": "script"
+			},
+			{
+				"color": "#4caf50",
+				"enabled": true,
+				"id": "wajXZk1C9jwo8KHSGMqTJ35VRUsfEgA8",
+				"name": "リンクを作成（記事【】付き）",
+				"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst _title = batchOfReplaceWork(title, url, replaceWordList);\n\tconst result = `<br>\\n◆ <a href=\"${url}\" target=\"_blank\" rel=\"noopener\">${_title}</a> 【<a href=\"\" target=\"_blank\" rel=\"noopener\"></a>】<br>\\n\\n`;\n\n\treturn result;\n}",
+				"type": "script"
+			},
+			{
+				"color": "#4caf50",
+				"enabled": true,
+				"id": "HkYAIWlpuF3R9z3PUgTfxpn0QGFnr9Ay",
+				"name": "リンクを作成（記事 ニュース元）",
+				"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst _title = batchOfReplaceWork(title, url, replaceWordList);\n\tconst result = `<br>\\n◆ <a href=\"${url}\" target=\"_blank\" rel=\"noopener\">${_title}</a> 【<a href=\"\" target=\"_blank\" rel=\"noopener\"></a>】 ニュース元：<a href=\"${referrer}\" target=\"_blank\" rel=\"noopener\">dummy</a><br>\\n\\n`;\n\n\treturn result;\n}",
+				"type": "script"
+			},
+			{
+				"color": "#ffc107",
+				"enabled": true,
+				"id": "YWUyi8lnm29xjNS6Jdf0NiI68uhE36zf",
+				"name": "Title",
+				"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst result = title ? title : \"blank title\";\n\n\treturn result;\n}",
+				"type": "script"
+			},
+			{
+				"color": "#795548",
+				"enabled": true,
+				"id": "PwQ27CycswE1s8QYgSOSCFtAx63AFcLr",
+				"name": "URL",
+				"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst result = url;\n\n\treturn result;\n}",
+				"type": "script"
+			},
+			{
+				"color": "#795548",
+				"enabled": true,
+				"id": "eF7uEVB55JzQX7rc15VB7kfoMx8po4Pq",
+				"name": "URL（Text Fragment）",
+				"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst result = `${url}#:~:text=${selection.selectionText}`;\n\n\treturn result;\n}",
+				"type": "script"
+			},
+			{
+				"color": "#cc6600",
+				"enabled": true,
+				"id": "iSIdZgbecdcX0i8J16g9Q31b7K6su0En",
+				"name": "Markdown",
+				"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst result = `[${title}](${url} \"${title}\")`;\n\t\n\treturn result;\n}",
+				"type": "script"
+			},
+			{
+				"color": "#fb7720",
+				"enabled": true,
+				"id": "RTsGhNj23Qvx6bryptqKRJSQrK1WAV1a",
+				"name": "引用",
+				"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst quotation   = key.shiftKey ? selection.selectionHTML : selection.selectionText;\n\tconst activeTitle = selection.selected ? selection.title : title;\n\tconst activeURL   = selection.selected ? selection.url : url;\n\tconst result = `\n<!-- 引用開始 -->\n<div class=\"quotation\">\n\t<blockquote cite=\"${activeURL}\">\n\t\t${quotation}\n\t</blockquote>\n\t\n\t<p><cite><a href=\"${activeURL}\" target=\"_blank\" rel=\"noopener\">${activeTitle}</a></cite></p>\n</div>\n<!-- 引用終了 -->\n`;\n\t\n\treturn result.trim();\n}",
+				"type": "script"
+			},
+			{
+				"color": "#fb7720",
+				"enabled": true,
+				"id": "8OE7u2iX5Vo9QoVwK2LXc9ZuiPeAhUBp",
+				"name": "引用（HTML5 ver）",
+				"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst quotation   = key.shiftKey ? selection.selectionHTML : selection.selectionText;\n\tconst activeTitle = selection.selected ? selection.title : title;\n\tconst activeURL   = selection.selected ? selection.url : url;\n\tconst result = `\n<figure>\n\t<blockquote cite=\"${activeURL}\">\n\t\t${quotation}\n\t</blockquote>\n\n\t<figcaption><cite><a href=\"${activeURL}\">${activeTitle}</a></cite></figcaption>\n</figure>\n`;\n\t\n\treturn result.trim();\n}",
+				"type": "script"
+			},
+			{
+				"codes": [
+					{
+						"color": "#0066ff",
+						"enabled": true,
+						"id": "Q8OAFOYe5ZkUSyWkQZUeOYpnb8cMx7b2",
+						"name": "Create Amazon Affiliate Link",
+						"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst yourAssociateID = \"********\";\n\n\tconst regexp = /\\/(dp|gp\\/product|exec\\/obidos|o\\/ASIN)\\/(?<asin>[0-9A-Z]+)($|\\/|\\?)/i;\n\tconst match  = url.match(regexp);\n\n\tif ( !match || !match?.groups?.asin ) {\n\t\treturn \"No Match.\"\n\t}\n\n\tconst amazon     = new URL(url);\n\tconst asin       = match.groups.asin;\n\tconst productURL = `${amazon.origin}/dp/${asin}?tag=${yourAssociateID}`;\n\tconst result     = `<a href=\"${productURL}\" target=\"_blank\" rel=\"noopener\">${title}</a>`;\n\n\treturn result;\n}",
+						"type": "script"
+					},
+					{
+						"color": "#0066ff",
+						"enabled": true,
+						"id": "aPKkt0B8YE3HjR3wAZWJfLgTujxNZ6rO",
+						"name": "Reaction for Hatena Bookmark & Yahoo Realtime Search",
+						"text": "(reserved) => {\n\tconst { title, url, referrer, content, selection, key } = reserved;\n\n\tconst urlObj = new URL(url);\n\tconst https  =  (url.protocol === \"https:\") ? \"s/\" : \"\";\n\t\n\tconst hatena = `https://b.hatena.ne.jp/entry/${https}${url}`;\n\tconst yahoo  = `https://search.yahoo.co.jp/realtime/search?ei=utf-8&p=${url}`;\n\n\tconst result = `${hatena}\\n${yahoo}`;\n\t\n\treturn result;\n}",
+						"type": "script"
+					}
+				],
+				"color": "#0066ff",
+				"enabled": true,
+				"id": "SSQ595GwCIeqDAXHI0L8UXNGHLLvfhQF",
+				"name": "Tool",
+				"type": "submenu"
+			},
+			{
+				"codes": [
+					{
+						"color": "#4caf50",
+						"enabled": true,
+						"id": "KuvtiMPtKdttbqhQDOvkG8igYUyjAtlZ",
+						"name": "function batchReplacementWork(str, url, list)",
+						"text": "/*\n\treplaceWord(str, list)\n\taddWord(str, url, list)\n\treplaceRegex(str, url, list)\n\n\treplaceFullWidthToHalfWidthString(str)\n\tescapeHTML(str)\n*/\nfunction batchOfReplaceWork(str, url, list) {\n\tif (!str || typeof str !== \"string\") {\n\t\treturn str;\n\t}\n\n\tstr = replaceWord(str, list);\n\tstr = addWord(str, url, list);\n\tstr = replaceRegex(str, url, list);\n\n\tstr = replaceFullWidthToHalfWidthString(str);\n\tstr = escapeHTML(str);\n\n\treturn str;\n}",
+						"type": "library"
+					},
+					{
+						"color": "#ffffff",
+						"enabled": true,
+						"id": "nM9azFsDqyqDwFUYuQ6dLKwgPqSOBvtX",
+						"name": "function replaceFullWidthToHalfWidthString(str)",
+						"text": "/*\n\t全角→半角(http://kazunori-lab.com/uchikikase/?p=955)\n*/\nfunction replaceFullWidthToHalfWidthString(str) {\n\tif (typeof str !== \"string\") {\n\t\treturn str;\n\t}\n\n\treturn (str)\n\t\t.replace(/　/g, \" \")\n\t\t.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {\n\t\t\t return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);\n\t\t});\n}",
+						"type": "library"
+					},
+					{
+						"color": "#ffffff",
+						"enabled": true,
+						"id": "RlQC0zRsjglr96pwXRfeRLdqUb5LEpEs",
+						"name": "function escapeHTML(str)",
+						"text": "function escapeHTML(str) {\n\tif (typeof str !== \"string\") {\n\t\treturn str;\n\t}\n\n\treturn (str).replace(/[&`'\"<>]/g, (match) => {\n\t\treturn {\n\t\t\t\"&\" : \"&amp;\",\n\t\t\t'`' : '&#x60;',\n\t\t\t\"'\" : \"&#x27;\",\n\t\t\t'\"' : \"&quot;\",\n\t\t\t\"<\" : \"&lt;\",\n\t\t\t\">\" : \"&gt;\"\n\t\t}[match];\n\t});\n}",
+						"type": "library"
+					},
+					{
+						"color": "#ffffff",
+						"enabled": true,
+						"id": "B8WOQ7tgFv2cfaKVtXlRhQ02aNaRlC38",
+						"name": "function replaceWord(str, list) & function addWord(str, url, list) & function replaceRegex(str, url, list)",
+						"text": "const replaceWordList = {\n\treplace : [\n\t\t{\n\t\t\tregex   : / \\| ナショナル ジオグラフィック日本版サイト$/,\n\t\t\treplace : \" - National Geographic\"\n\t\t},\n\t\t{\n\t\t\tregex   : / \\| ライフハッカー・ジャパン$/,\n\t\t\treplace : \" - lifehacker\"\n\t\t},\n\t\t{\n\t\t\tregex   : / \\| コリス$/,\n\t\t\treplace : \" - coliss\"\n\t\t},\n\t\t{\n\t\t\tregex   : /\" \\| アシアルブログ$/,\n\t\t\treplace : \" - Asial BLOG\"\n\t\t},\n\t\t{\n\t\t\tregex   : / \\| ハフポスト$/,\n\t\t\treplace : \" - HuffPost\"\n\t\t},\n\t\t{\n\t\t\tregex   : / \\| スラド (.*)$/,\n\t\t\treplace : \" - SRAD\"\n\t\t},\n\t\t{\n\t\t\tregex   : / \\| FUNDO$/,\n\t\t\treplace : \" - FUNDO\"\n\t\t},\n\t\t{\n\t\t\tregex   : / \\| 笑うメディア クレイジー$/,\n\t\t\treplace : \" - 笑うメディア クレイジー\"\n\t\t},\n\t\t{\n\t\t\tregex   : / \\| オトナンサー$/,\n\t\t\treplace : \" - オトナンサー\"\n\t\t},\n\t\t{\n\t\t\tregex   : /\\｜Jタウンネット$/,\n\t\t\treplace : \" - Jタウンネット\", \n\t\t},\n\t\t{\n\t\t\tregex   : / \\| 乗りものニュース$/,\n\t\t\treplace : \" - 乗りものニュース\"\n\t\t},\n\t\t{\n\t\t\tregex   : / \\| デジタルマーケティングTips \\| 株式会社マックスマウス$/,\n\t\t\treplace : \" - MaxMouse\"\n\t\t},\n\t\t{\n\t\t\tregex   : / - Togetter \\[トゥギャッター\\]$/,\n\t\t\treplace : \" - Togetter\"\n\t\t},\n\t\t{\n\t\t\tregex   : / - ククログ$/,\n\t\t\treplace : \" - ClearCode Blog\"\t\t\n\t\t}\n\t],\n\tadd : [\n\t\t{\n\t\t\tregex : /https:\\/\\/anond\\.hatelabo\\.jp\\/[0-9]{14}/,\n\t\t\tword  : \" - はてな匿名ダイアリー\"\n\t\t},\n\t\t{\n\t\t\tregex : /https:\\/\\/keiyaku-watch\\.jp\\//,\n\t\t\tword  : \" - 契約ウォッチ\"\n\t\t},\n\t\t{\n\t\t\tregex : /https:\\/\\/withnews\\.jp\\/article\\//,\n\t\t\tword  : \" - withnews\"\n\t\t},\n\t\t{\n\t\t\tregex : /https:\\/\\/fundo\\.jp\\/[0-9]{1,9}/,\n\t\t\tword  : \" - FUNDO\"\n\t\t}\t\t\n\t],\n\tregex : [\n\t\t{\n\t\t\turl : /https:\\/\\/qiita\\.com\\/(?<UserID>[\\w-]+)\\/items\\/(?<PostID>[\\w]+)/i,\n\t\t\treg : {\n\t\t\t\tregexp   : /^(?<Title>.*?) - Qiita$/i,\n\t\t\t\treplacer : (url, title, urlMatch, strMatch) => {\n\t\t\t\t\t// debug\n\t\t\t\t\t//console.log(\"Debug, replacerFunction() >> arguments >>\", { url, title, urlMatch, strMatch });\n\t\t\n\t\t\t\t\treturn `${strMatch?.groups?.Title} - ${urlMatch?.groups?.UserID}@Qiita`;\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\turl : /https:\\/\\/zenn\\.dev\\/(?<UserID>[\\w]+)\\/articles\\/(?<PostID>[\\w]+)/i,\n\t\t\treg : {\n\t\t\t\tregexp   : /$/i,\n\t\t\t\treplacer : (url, title, urlMatch, strMatch) => {\n\t\t\t\t\t// debug\n\t\t\t\t\t//console.log(\"Debug, replacerFunction() >> arguments >>\", { url, title, urlMatch, strMatch });\n\t\t\n\t\t\t\t\treturn `${title} - ${urlMatch?.groups?.UserID}@Zenn`;\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\turl : /https:\\/\\/twitter\\.com\\/(?<UserID>[\\w]+)(\\/)?$/i,\n\t\t\treg : {\n\t\t\t\tregexp   : /^(.*)$/i,\n\t\t\t\treplacer : (url, title, urlMatch, strMatch) => {\n\t\t\t\t\t// debug\n\t\t\t\t\t//console.log(\"Debug, replacerFunction() >> arguments >>\", { url, title, urlMatch, strMatch });\n\t\t\n\t\t\t\t\treturn `${urlMatch?.groups?.UserID}@Twitter`;\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\turl : /https:\\/\\/x\\.com\\/(?<UserID>[\\w]+)(\\/)?$/i,\n\t\t\treg : {\n\t\t\t\tregexp   : /^(.*)$/i,\n\t\t\t\treplacer : (url, title, urlMatch, strMatch) => {\n\t\t\t\t\t// debug\n\t\t\t\t\t//console.log(\"Debug, replacerFunction() >> arguments >>\", { url, title, urlMatch, strMatch });\n\t\t\n\t\t\t\t\treturn `${urlMatch?.groups?.UserID}@X`;\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\turl : /https:\\/\\/note\\.com\\/(?<UserID>[\\w]+)(\\/)?$/i,\n\t\t\treg : {\n\t\t\t\tregexp   : /^(?<UserName>.*)｜note$/i,\n\t\t\t\treplacer : (url, title, urlMatch, strMatch) => {\n\t\t\t\t\t// debug\n\t\t\t\t\t//console.log(\"Debug, replacerFunction() >> arguments >>\", { url, title, urlMatch, strMatch });\n\t\t\n\t\t\t\t\treturn `${strMatch?.groups?.UserName}@note`;\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\turl : /https?:\\/\\/blog\\.livedoor\\.jp\\/(?<UserID>[\\w]+)(\\/)/i,\n\t\t\treg : {\n\t\t\t\tregexp   : /(?<title>.*) - livedoor Blog（ブログ）$/i,\n\t\t\t\treplacer : (url, title, urlMatch, strMatch) => {\n\t\t\t\t\t// debug\n\t\t\t\t\t//console.log(\"Debug, replacerFunction() >> arguments >>\", { url, title, urlMatch, strMatch });\n\n\t\t\t\t\tconst result = (strMatch?.groups?.title) ? strMatch.groups.title : title;\n\t\t\n\t\t\t\t\treturn result;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t]\n};\n\nfunction replaceWord(str, list) {\n\tconst array = list.replace;\n\tconst loop  = list.replace.length;\n\n\tfor (let i = 0; i < loop; i++) {\n\t\tconst obj     = array[i];\n\t\tconst regex   = new RegExp(obj.regex);\n\t\tconst replace = obj.replace;\n\t\t\t\n\t\tstr = str.replace(regex, replace);\n\t}\n\t\n\treturn str;\n}\n\nfunction addWord(str, url, list) {\n\tconst array      = list.add;\n\tconst loop       = list.add.length;\n\tconst currentURL = url;\n\n\tfor (let i = 0; i < loop; i++) {\n\t\tconst obj     = array[i];\n\t\tconst regex   = new RegExp(obj.regex);\n\t\tconst addWord = obj.word;\n\t\t\t\n\t\tif ((currentURL).match(regex)) {\n\t\t\tstr += addWord;\n\t\t}\n\t}\n\t\n\treturn str;\n}\n\nfunction replaceRegex(str, url, list) {\n\tconst array  = list.regex;\n\tconst loop   = list.regex.length;\n\tlet   result = str;\n\n\tfor (let i = 0; i < loop; i++) {\n\t\tconst obj      = array[i];\n\t\tconst urlMatch = (url).match(obj.url);\n   \n\t\tif ( urlMatch && Array.isArray(urlMatch) && urlMatch[0] ) {\n\t\t\tconst reg              = obj.reg;\n\t\t\tconst strMatch         = (str).match(reg.regexp);\n\t\t\tconst replacerFunction = reg.replacer;\n\n\t\t\tresult = replacerFunction(url, str, urlMatch, strMatch);\n\t\n\t\t\t// debug\n\t\t\t//console.log({ url, str, urlMatch, strMatch, result });\n\n\t\t\tbreak;\n\t\t}\n\t}\n\t\n\treturn result;\n}",
+						"type": "library"
+					}
+				],
+				"color": "#ffffff",
+				"enabled": true,
+				"id": "dgyVxV5O1lnTTlEQWecR33AvxaOMnEax",
+				"name": "Library",
+				"type": "submenu"
+			}
+		]
+	}
+}
