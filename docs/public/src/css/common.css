@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+.vp-doc > div a       > img { border: solid 3px transparent; }
+.vp-doc > div a:hover > img { border: solid 3px #909090; }
+
+.vp-doc > div img {
+	display: initial;
+}
+
+/* 外部リンク(テキスト)にアイコンを追加 */
+.vp-doc > div *:not(object):not(embed) a[target="_blank"]:not([href*="from-es.github.io"]):not([href$=".jpg"]):not([href$=".png"]):not([href$=".gif"]):hover::after {
+	all: initial;
+
+	content: url('/src/img/external-link.png');
+	background-color: #f9f9f9; /* common.css .entry の background-color と同じ指定にする */
+	text-decoration: none;
+
+	margin-left: 0.5rem;
+	position: absolute;
+	z-index: 10;
+}
+
+
+
+/* ソーシャルボタン */
+#social-button {
+	margin-top: 1rem; margin-bottom: 1rem;
+}
+
+#social-button ul {
+	margin: 0; padding: 0;
+}
+
+#social-button li {
+	list-style: none;
+	display: inline-block;
+	margin: 0; padding: 0;
+	min-width: 6rem;
+	text-align: center;
+}
+
+.sb-hatenabookmark { background-color: #00a4de; } /* http://hatenacorp.jp/press/resource                          */
+.sb-twitter        { background-color: #1da1f2; } /* https://about.twitter.com/ja/company/brand-resources.html    */
+.sb-facebook       { background-color: #3b5998; } /* https://en.facebookbrand.com/#brand-guidelines-assets        */
+.sb-line           { background-color: #00C300; } /* https://developers.line.biz/ja/docs/line-login/login-button/ */
+.sb-pocket         { background-color: #ef4056; }
+
+#social-button a         { font-style: normal; font-weight: bold; text-decoration: none; font-family: "Times New Roman", "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
+#social-button a         { padding: 0.25rem 0.75rem; display: block; border-radius: 0.25rem; }
+#social-button a:link    { color: #ffffff; }
+#social-button a:visited { color: #ffffff; }
+#social-button a:hover   { color: #ffffff; background-color: #0068ff; }
+#social-button a:active  { color: #ffffff; }
+
+#social-button a {
+	position: relative;
+}
+#social-button a:after {
+	all: initial;
+
+	content: attr(title);
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	margin: 0 auto;
+	padding: 0.25rem 0.50rem;
+	background: rgba(0, 0, 0, 0.85);
+	border-radius: 5px;
+
+	font-weight: normal;
+	color: #fff;
+	white-space: nowrap;
+	transition: all 0.75s;	/* フェードアウト(https://9-bb.com/css%E3%81%AEopacity%E3%81%A8transition-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A4%E3%83%B3%E3%83%BB%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A2%E3%82%A6/) */
+	opacity: 0;
+}
+#social-button a:hover:after {
+	opacity: 1;
+}
+
+
+
+
+/* 以下、Markdown 対応用 */
+
+/* アイキャッチ画像(記事先頭の画像) */
+#screenshot {
+	max-width: calc(100%);
+}
+
+detail > summary {
+	margin-bottom: 1rem;
+}
+details > p {
+	margin-left: 1rem;
+}
+
+
+ /* Counter for Q&A */
+.qaa_reset {
+	counter-reset: qaa;
+}
+details.qaa summary:before {
+	counter-increment: qaa;
+	content: counter(qaa, decimal-leading-zero) ". ";
+
+	font-weight: bold;
+}
