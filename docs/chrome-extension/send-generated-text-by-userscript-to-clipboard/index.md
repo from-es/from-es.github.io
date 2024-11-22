@@ -35,7 +35,7 @@ head:
 </script>
 <div id="social-button" v-html="SocialButton"></div>
 
-![S.G.T.C.](./img/screenshot.png "S.G.T.C."){loading=lazy}
+![S.G.T.C.](/chrome-extension/send-generated-text-by-userscript-to-clipboard/img/screenshot.png "S.G.T.C."){loading=lazy}
 
 <!-- 目次の動的生成（tocbot） -->
 <nav class="toc toc-position-center js-toc dynamic"></nav>
@@ -72,7 +72,7 @@ On the user side, more functionality can be added by writing "UserScript".
 
 ### [To use the extension](#how-to-use-general) {#how-to-use-general}
 
-[![How to use S.G.T.C. from Popup Menu](./img/how-to-use-popup-menu-thumbnail.png "How to use S.G.T.C. from Popup Menu"){loading=lazy}](./img/how-to-use-popup-menu.png "How to use S.G.T.C. from Popup Menu"){target=_blank rel=noopener} [![How to use S.G.T.C. from Context Menu](./img/how-to-use-context-menu-thumbnail.png "How to use S.G.T.C. from Context Menu"){loading=lazy}](./img/how-to-use-context-menu.png "How to use S.G.T.C. from Context Menu"){target=_blank rel=noopener}
+[![How to use S.G.T.C. from Popup Menu](/chrome-extension/send-generated-text-by-userscript-to-clipboard/img/how-to-use-popup-menu-thumbnail.png "How to use S.G.T.C. from Popup Menu"){loading=lazy}](/chrome-extension/send-generated-text-by-userscript-to-clipboard/img/how-to-use-popup-menu.png "How to use S.G.T.C. from Popup Menu"){target=_blank rel=noopener} [![How to use S.G.T.C. from Context Menu](/chrome-extension/send-generated-text-by-userscript-to-clipboard/img/how-to-use-context-menu-thumbnail.png "How to use S.G.T.C. from Context Menu"){loading=lazy}](/chrome-extension/send-generated-text-by-userscript-to-clipboard/img/how-to-use-context-menu.png "How to use S.G.T.C. from Context Menu"){target=_blank rel=noopener}
 
 
 Click on the icon on the right side of the address bar or the name of the script you wish to run from the context menu.
@@ -80,8 +80,8 @@ Click on the icon on the right side of the address bar or the name of the script
 ### [To use on local file](#how-to-use-local-file) {#how-to-use-local-file}
 
 
-[![Manage Extension](./img/manage-extension-thumbnail.png "Manage Extension"){loading=lazy}](./img/manage-extension.png "Manage Extension"){target=_blank rel=noopener}
-[![enable the "Allow access to file URLs" option](./img/how-to-use-local-thumbnail.png 'enable the "Allow access to file URLs" option'){loading=lazy}](./img/how-to-use-local.png 'enable the "Allow access to file URLs" option'){target=_blank rel=noopener}
+[![Manage Extension](/chrome-extension/send-generated-text-by-userscript-to-clipboard/img/manage-extension-thumbnail.png "Manage Extension"){loading=lazy}](/chrome-extension/send-generated-text-by-userscript-to-clipboard/img/manage-extension.png "Manage Extension")
+[![enable the "Allow access to file URLs" option](/chrome-extension/send-generated-text-by-userscript-to-clipboard/img/how-to-use-local-thumbnail.png 'enable the "Allow access to file URLs" option'){loading=lazy}](/chrome-extension/send-generated-text-by-userscript-to-clipboard/img/how-to-use-local.png 'enable the "Allow access to file URLs" option')
 
 If you want to run "S.G.T.C." on local files as well,
 
