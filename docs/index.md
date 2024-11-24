@@ -1,10 +1,13 @@
 ---
+# title add string customize
+titleTemplate: false
+
 # lastUpdated
 lastUpdated: true
 
 # Page Layout
 sidebar : false
-outline : [2, 3]
+outline : false
 prev    : false
 next    : false
 footer  : true
@@ -21,12 +24,14 @@ head:
 ---
 
 
-# 拡張機能サポート用サイト
+# GitHub@駄文にゅうす
+
+## About
 
 ここは私が製作したGoogle Chrome用拡張機能のコード置き場兼サポート用サイト（予定）です。私については[About](/about.html "About")を読んでください。
 
 
-## 拡張機能一覧
+## List
 
 - Original
 	- Display Image List

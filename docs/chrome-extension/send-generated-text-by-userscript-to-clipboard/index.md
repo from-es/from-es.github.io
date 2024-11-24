@@ -273,7 +273,7 @@ Changes to settings, additions or modifications to user scripts, and changes to 
 	// "toString() or JSON.stringify()" いずれかのメソッドで文字列に変換　
 	console.log('Debug : "Get Image URL in Page" >>', result.toString());
 
-	// 必須、必ず1文字以上の文字列で返す事
+	// 必須、必ず1文字以上の文字列で返す事。ここで返した文字列がクリップボードに送られる
 	return (result ? result : "Not Found Image URL.");
 }
 ```
@@ -333,29 +333,11 @@ Changes to settings, additions or modifications to user scripts, and changes to 
 
 ## [Known Issues](#known-issues) {#known-issues}
 
-- Google Chrome 130 beta or dev で「閲覧中ページの情報 & キー状態」が取得できない
-	- [Extension loaded from the local hard disk in dev mode refuses to load its own files [368070331] - Chromium](https://issues.chromium.org/issues/368070331 "Extension loaded from the local hard disk in dev mode refuses to load its own files [368070331] - Chromium"){target=_blank rel=noopener}
+- none
 
 
-## [Contact](#contact) {#contact}
 
-- Developer
-	- From E
-- E-Mail
-	- &#x65;&#x78;&#x74;&#x65;&#x6e;&#x73;&#x69;&#x6f;&#x6e;&#x40;&#x64;&#x61;&#x62;&#x75;&#x6e;&#x2e;&#x6e;&#x65;&#x74;
-- URL
-	- Web Site
-		- https://dabun.net
-	- X(formerly Twitter)
-		- https://twitter.com/from_es
-	- GitHub
-		- https://github.com/from-es
-
-### [Link](#contact-link) {#contact-link}
-
-当ページへのリンクは、個人・商用を問わずご自由に。事前の連絡は不要です。
-
-### [Support](#contact-support) {#contact-support}
+## [Support](#contact-support) {#contact-support}
 
 拡張機能「S.G.T.C.」の不具合報告は、
 
@@ -367,9 +349,3 @@ Changes to settings, additions or modifications to user scripts, and changes to 
 4. ブラウザの種類とバージョン
 
 を添えて報告してください。ブラウザのリリース チャンネル Dev、Canary、それに準ずるバージョンでの不具合は対象外とします。第三者が製作したユーザースクリプトについては、その作者に問い合わせてください。
-
-### [Donation](#contact-donation) {#contact-donation}
-
-サイト維持、継続的な開発の為の寄付を受け付けています。この拡張機能に満足いただけた方、開発を応援しようとされる方はぜひよろしくお願いします。
-
-寄付は、[欲しいものリスト - Amazon](https://www.amazon.co.jp/hz/wishlist/ls/340XJDFKAFF8N?ref_=wl_share "欲しいものリスト - 拡張機能開発支援@駄文にゅうす - Amazon"){target=_blank rel=noopener} 経由で送ることができます。

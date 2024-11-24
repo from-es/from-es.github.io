@@ -6,6 +6,10 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+	// title add string customize >> "|" → "-"
+	// https://vitepress.dev/reference/site-config#titletemplate
+	titleTemplate: ':title - GitHub@駄文にゅうす',
+
 	head: [
 		[
 		  'link',
@@ -21,7 +25,7 @@ export default defineConfig({
 	description: "GitHub@駄文にゅうす",
 
 	themeConfig: {
-		// https://vitepress.dev/reference/default-theme-config
+		 // https://vitepress.dev/reference/default-theme-config
 		logo: '/src/img/logo-512x512.png',
 
 		nav: [

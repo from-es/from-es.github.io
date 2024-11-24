@@ -19,6 +19,7 @@ head:
 
 # About
 
+
 ## What is this?
 
 ここは私が製作したGoogle Chrome用拡張機能のコード置き場兼サポート用サイト（予定）です。
@@ -38,3 +39,16 @@ head:
 		- https://twitter.com/from_es
 	- GitHub
 		- https://github.com/from-es
+
+
+## Link
+
+当ページへのリンクは、個人・商用を問わずご自由に。事前の連絡は不要です。
+
+
+## Donation
+
+
+サイト維持、継続的な開発の為の寄付を受け付けています。インストールした拡張機能の機能に満足いただけた方、その開発を応援しようとされる方はぜひよろしくお願いします。
+
+寄付は、[欲しいものリスト - Amazon](https://www.amazon.co.jp/hz/wishlist/ls/340XJDFKAFF8N?ref_=wl_share "欲しいものリスト - 拡張機能開発支援@駄文にゅうす - Amazon"){target=_blank rel=noopener} 経由で送ることができます。
