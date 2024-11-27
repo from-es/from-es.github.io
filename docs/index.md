@@ -17,7 +17,28 @@ head:
   - - meta
     - name: description
       content: "Google Chrome用拡張機能のコード置き場兼サポート用サイト（仮）"
+
+# header > meta > OGP
+  - - meta
+    - property: "og:type"
+      content : "website"
+  - - meta
+    - property: "og:site_name"
+      content : "GitHub@駄文にゅうす"
+  - - meta
+    - property: "og:title"
+      content : "GitHub@駄文にゅうす"
+  - - meta
+    - property: "og:description"
+      content : "Google Chrome用拡張機能のコード置き場兼サポート用サイト（仮）"
+  - - meta
+    - property: "og:url"
+      content : "https://from-es.github.io/"
+  - - meta
+    - property: "og:image"
+      content : "https://from-es.github.io/src/img/logo-512x512.png"
 ---
+
 
 
 # GitHub@駄文にゅうす
