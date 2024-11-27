@@ -1,0 +1,11 @@
+- Name
+	- From E
+- E-Mail
+	- &#x65;&#x78;&#x74;&#x65;&#x6e;&#x73;&#x69;&#x6f;&#x6e;&#x40;&#x64;&#x61;&#x62;&#x75;&#x6e;&#x2e;&#x6e;&#x65;&#x74;
+- URL
+	- Web Site
+		- https://dabun.net
+	- X(formerly Twitter)
+		- https://twitter.com/from_es
+	- GitHub
+		- https://github.com/from-es

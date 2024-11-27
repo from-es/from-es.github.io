@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* アイキャッチ画像(記事先頭の画像) */
+#screenshot {
+	max-width: calc(100%);
+}
+
+detail > summary {
+	margin-bottom: 1rem;
+}
+details > p {
+	margin-left: 1rem;
+}
+
+
+ /* Counter for Q&A */
+.qaa_reset {
+	counter-reset: qaa;
+}
+
+details[data-style-for-details-of-custom-containers="qaa"] summary:before {
+	counter-increment: qaa;
+	content: counter(qaa, decimal-leading-zero) ". ";
+
+	font-weight: bold;
+}
+details[data-style-for-details-of-custom-containers="qaa"] > p {
+	font-weight: normal;
+}

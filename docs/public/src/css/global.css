@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.vp-doc > div a       > img { border: solid 0.25rem transparent; }
+.vp-doc > div a:hover > img { border: solid 0.25rem #909090; }
+
+.vp-doc > div img {
+	display: initial;
+}
+
+
+
+/* 外部リンク(テキスト)末尾にアイコン表示 */
+.vp-doc > div *:not(object):not(embed) a[target="_blank"]:not([data-add-external-link-icon="false"]):not([href$=".webp"]):not([href$=".jpg"]):not([href$=".png"]):not([href$=".gif"]):hover::after {
+	all: initial;
+
+	position: absolute;
+	z-index: 10;
+
+	display: inline-block;
+
+	content: '';
+	background-image: url("/src/img/external-link-for-light.svg");  /* put css file in public directory */
+	background-size: contain;
+	width:  1.25rem;
+	height: 1.25rem;
+
+	margin-left: 0.5rem;
+}
+
+html[class="dark"] .vp-doc > div *:not(object):not(embed) a[target="_blank"]:not([data-add-external-link-icon="false"]):not([href$=".webp"]):not([href$=".jpg"]):not([href$=".png"]):not([href$=".gif"]):hover::after {
+	background-image: url("/src/img/external-link-for-dark.svg");  /* put css file in public directory */
+}

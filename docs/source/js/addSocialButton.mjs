@@ -27,7 +27,7 @@ const str = `
 		<a href="${ social.hatebu }" target="_blank" rel="noopener" class="sb-hatenabookmark" title="Add this article to Hatena Bookmark">B!</a>
 	</li>
 	<li>
-		<a href="${ social.twitter }" target="_blank" rel="noopener" class="sb-twitter" title="Share this article on X">X</a>
+		<a href="${ social.x }" target="_blank" rel="noopener" class="sb-x" title="Share this article on X">X</a>
 	</li>
 	<li>
 		<a href="${ social.facebook }" target="_blank" rel="noopener" class="sb-facebook" title="Share this article on Facebook">Facebook</a>

@@ -16,11 +16,7 @@ footer  : true
 head:
   - - meta
     - name: description
-      content: "Google Chrome用拡張機能のコード置き場兼サポート用サイト（予定）"
-  - - link
-    - rel: "stylesheet"
-    - href: "/src/css/common.css"
-    - type: "text/css"
+      content: "Google Chrome用拡張機能のコード置き場兼サポート用サイト（仮）"
 ---
 
 
@@ -28,7 +24,7 @@ head:
 
 ## About
 
-ここは私が製作したGoogle Chrome用拡張機能のコード置き場兼サポート用サイト（予定）です。私については[About](/about.html "About")を読んでください。
+ここは私が製作したGoogle Chrome用拡張機能のコード置き場兼サポート用サイト（仮）です。私については[About](/about.html "About")を読んでください。
 
 
 ## List

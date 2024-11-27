@@ -13,27 +13,33 @@ export default defineConfig({
 	head: [
 		[
 		  'link',
-		  { rel: "stylesheet", href: "/src/css/common.css", type: "text/css" }
+		  { rel: "stylesheet", href: "/src/css/global.css", type: "text/css" } // put file in public directory, if base is set, use /base/*****.css
 		]
-	 ],
-	/*
-		base: "/from-es.github.io",
-	*/
-	lang: 'ja',
+	],
 
+	/*
+		base: "/blog",
+	*/
+
+	lang: 'ja',
 	title: "GitHub@駄文にゅうす",
 	description: "GitHub@駄文にゅうす",
 
+	// https://vitepress.dev/guide/markdown#image-lazy-loading
+	markdown: {
+		image: {
+		  // image lazy loading is disabled by default
+		  lazyLoading: true
+		}
+	 },
+
 	themeConfig: {
-		 // https://vitepress.dev/reference/default-theme-config
-		logo: '/src/img/logo-512x512.png',
+		// https://vitepress.dev/reference/default-theme-config
+		logo: '/src/img/logo-512x512.png',  // put css file in public directory
 
 		nav: [
 			{ text: 'Home',  link: '/' },
 			{ text: 'About', link: 'about.md' },
-			/*
-			{ text: 'Examples', link: '/markdown-examples' }
-			 */
 		],
 		/*
 		sidebar: [
