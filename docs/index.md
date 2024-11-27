@@ -17,8 +17,6 @@ head:
   - - meta
     - name: description
       content: "Google Chrome用拡張機能のコード置き場兼サポート用サイト（仮）"
-
-# header > meta > OGP
   - - meta
     - property: "og:type"
       content : "website"
