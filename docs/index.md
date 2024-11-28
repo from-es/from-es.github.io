@@ -6,11 +6,11 @@ titleTemplate: false
 lastUpdated: true
 
 # Page Layout
-sidebar : false
-outline : false
-prev    : false
-next    : false
-footer  : true
+sidebar: false
+outline: false
+prev   : false
+next   : false
+footer : true
 
 # header > meta
 head:
@@ -27,11 +27,11 @@ head:
     - property: "og:title"
       content : "GitHub@駄文にゅうす"
   - - meta
+    - property: "og:url"
+      content : "https://from-es.github.io"
+  - - meta
     - property: "og:description"
       content : "Google Chrome用拡張機能のコード置き場兼サポート用サイト（仮）"
-  - - meta
-    - property: "og:url"
-      content : "https://from-es.github.io/"
   - - meta
     - property: "og:image"
       content : "https://from-es.github.io/src/img/logo-512x512.png"
