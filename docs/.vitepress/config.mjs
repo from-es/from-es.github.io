@@ -12,7 +12,16 @@ export default defineConfig({
 
 	// put file in public directory, if base is set, use /base/*****.css
 	head: [
-		[ 'link', { rel: "stylesheet", type: "text/css", href: "/src/css/global.css"} ],
+		// css
+		[ 'link', { rel: "stylesheet", href: "/src/css/global.css", type: "text/css" } ],
+
+		// favicon
+		[ 'link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/src/img/favicon/favicon-16x16.png"} ],
+		[ 'link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/src/img/favicon/favicon-32x32.png"} ],
+		[ 'link', { rel: "icon", type: "image/png", sizes: "48x48", href: "/src/img/favicon/favicon-48x48.png"} ],
+		[ 'link', { rel: "icon",                    sizes: "48x48", href: "/favicon.ico"} ],
+
+		// Google Analytics(https://vitepress.dev/reference/site-config#example-using-google-analytics)
 		[ 'script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-4DYYDSWEZD' } ],
 		[ 'script', {}, `window.dataLayer = window.dataLayer || []; function gtag(){ dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-4DYYDSWEZD');` ]
 	],
