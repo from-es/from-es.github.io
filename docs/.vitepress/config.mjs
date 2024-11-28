@@ -10,17 +10,13 @@ export default defineConfig({
 	// https://vitepress.dev/reference/site-config#titletemplate
 	titleTemplate: ':title - GitHub@駄文にゅうす',
 
+	// put file in public directory, if base is set, use /base/*****.css
 	head: [
-		// css
-		[ 'link', { rel: "stylesheet", href: "/src/css/global.css", type: "text/css" } ], // put file in public directory, if base is set, use /base/*****.css
-
-		// favicon
-		[ 'link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/src/img/favicon/favicon-16x16.png"} ],
-		[ 'link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/src/img/favicon/favicon-32x32.png"} ],
-		[ 'link', { rel: "icon", type: "image/png", sizes: "48x48", href: "/src/img/favicon/favicon-48x48.png"} ],
-		[ 'link', { rel: "icon",                    sizes: "48x48", href: "/favicon.ico"} ],
-
-		// Google Analytics(https://vitepress.dev/reference/site-config#example-using-google-analytics)
+		[ 'link', { rel: "stylesheet", type: "text/css",                  href: "/src/css/global.css"} ],
+		[ 'link', { rel: "icon",       type: "image/png", sizes: "16x16", href: "/src/img/favicon/favicon-16x16.png"} ],
+		[ 'link', { rel: "icon",       type: "image/png", sizes: "32x32", href: "/src/img/favicon/favicon-32x32.png"} ],
+		[ 'link', { rel: "icon",       type: "image/png", sizes: "48x48", href: "/src/img/favicon/favicon-48x48.png"} ],
+		[ 'link', { rel: "icon",                          sizes: "48x48", href: "/favicon.ico"} ],
 		[
 			'script',
 			{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-4DYYDSWEZD' }
