@@ -13,18 +13,8 @@ export default defineConfig({
 	// put file in public directory, if base is set, use /base/*****.css
 	head: [
 		[ 'link', { rel: "stylesheet", type: "text/css", href: "/src/css/global.css"} ],
-		[
-			'script',
-			{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-4DYYDSWEZD' }
-		],
-		[
-			'script',
-			{},
-			`window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-4DYYDSWEZD');`
-		]
+		[ 'script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-4DYYDSWEZD' } ],
+		[ 'script', {}, `window.dataLayer = window.dataLayer || []; function gtag(){ dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-4DYYDSWEZD');` ]
 	],
 
 	lang: 'ja',
