@@ -12,28 +12,8 @@ export default defineConfig({
 
 	// put file in public directory, if base is set, use /base/*****.css
 	head: [
-		[ 'link', { rel: "stylesheet", type: "text/css",                  href: "/src/css/global.css"} ],
-		[ 'link', { rel: "icon",       type: "image/png", sizes: "16x16", href: "/src/img/favicon/favicon-16x16.png"} ],
-		[ 'link', { rel: "icon",       type: "image/png", sizes: "32x32", href: "/src/img/favicon/favicon-32x32.png"} ],
-		[ 'link', { rel: "icon",       type: "image/png", sizes: "48x48", href: "/src/img/favicon/favicon-48x48.png"} ],
-		[ 'link', { rel: "icon",                          sizes: "48x48", href: "/favicon.ico"} ],
-		[
-			'script',
-			{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-4DYYDSWEZD' }
-		],
-		[
-			'script',
-			{},
-			`window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-4DYYDSWEZD');`
-		]
+		[ 'link', { rel: "stylesheet", type: "text/css", href: "/src/css/global.css"} ],
 	],
-
-	/*
-		base: "/blog",
-	*/
 
 	lang: 'ja',
 	title: "GitHub@駄文にゅうす",
