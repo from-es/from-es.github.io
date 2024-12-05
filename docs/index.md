@@ -22,10 +22,10 @@ head:
       content : "website"
   - - meta
     - property: "og:site_name"
-      content : "GitHub@駄文にゅうす"
+      content : "駄文にゅうす@GitHub"
   - - meta
     - property: "og:title"
-      content : "GitHub@駄文にゅうす"
+      content : "駄文にゅうす@GitHub"
   - - meta
     - property: "og:url"
       content : "https://from-es.github.io"
@@ -39,7 +39,7 @@ head:
 
 
 
-# GitHub@駄文にゅうす
+# 駄文にゅうす@GitHub
 
 ## About
 

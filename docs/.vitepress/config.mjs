@@ -8,7 +8,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
 	// title add string customize >> "|" → "-"
 	// https://vitepress.dev/reference/site-config#titletemplate
-	titleTemplate: ':title - GitHub@駄文にゅうす',
+	titleTemplate: ':title - 駄文にゅうす@GitHub',
 
 	// put file in public directory, if base is set, use /base/*****.css
 	head: [
@@ -27,8 +27,8 @@ export default defineConfig({
 	],
 
 	lang: 'ja',
-	title: "GitHub@駄文にゅうす",
-	description: "GitHub@駄文にゅうす",
+	title: "駄文にゅうす@GitHub",
+	description: "駄文にゅうす@GitHub",
 
 	// https://vitepress.dev/guide/markdown#image-lazy-loading
 	markdown: {
