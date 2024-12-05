@@ -52,7 +52,7 @@ head:
 等のユーザースクリプトが含まれています。ユーザー側で「ユーザースクリプト」を記述することにより、より便利な機能を追加できます。
 
 > [!NOTE]
-> 「S.G.T.C.」は「Send UserScript generated text to clipboard.」の略称です。
+> 「S.G.T.C.」は「Send "Generated Text By UserScript" to Clipboard.」の略称です。
 
 ## Install {#install}
 
