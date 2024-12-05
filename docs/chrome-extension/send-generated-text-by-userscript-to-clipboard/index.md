@@ -13,7 +13,7 @@ footer  : true
 head:
   - - meta
     - name: description
-      content: "Chrome拡張機能「S.G.T.C. ～Send \"Generated Text By UserScript\" to Clipboard.～」の公式ドキュメント。"
+      content: "Chrome拡張機能「S.G.T.C.」の公式ドキュメント。"
   - - meta
     - name: keywords
       content: "S.G.T.C., Chrome Extension, Chrome 拡張機能, UserScript, ユーザースクリプト"
@@ -25,7 +25,7 @@ head:
 
 
 
-# Chrome拡張機能「S.G.T.C. ～Send "Generated Text By UserScript" to Clipboard.～」 {#top}
+# Chrome拡張機能「S.G.T.C.」 {#top}
 
 
 <!-- Add, Social Button -->
@@ -51,6 +51,8 @@ head:
 
 等のユーザースクリプトが含まれています。ユーザー側で「ユーザースクリプト」を記述することにより、より便利な機能を追加できます。
 
+> [!NOTE]
+> 「S.G.T.C.」は「Send UserScript generated text to clipboard.」の略称です。
 
 ## Install {#install}
 
