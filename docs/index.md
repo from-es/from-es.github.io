@@ -50,13 +50,15 @@ head:
 
 - Original
 	- Display Image List
-		- [Display Image List - Chrome Web Store](https://chromewebstore.google.com/detail/display-image-list/mjanofnaeoiipkoeajefmfpgcnlgiflc "Display Image List - Chrome Web Store")
+		- [Display Image List - Chrome Web Store](https://chromewebstore.google.com/detail/display-image-list/mjanofnaeoiipkoeajefmfpgcnlgiflc "https://chromewebstore.google.com/detail/display-image-list/mjanofnaeoiipkoeajefmfpgcnlgiflc")
 	- S.G.T.C. ～Send "Generated Text By UserScript" to Clipboard.～
-		- [S.G.T.C. - Chrome Web Store](https://chromewebstore.google.com/detail/sgtc/gljkfiofalgeofkhcpeiiadljmnbjphd "S.G.T.C. - Chrome Web Store")
-		- [S.G.T.C. - Document](./chrome-extension/send-generated-text-by-userscript-to-clipboard/ "S.G.T.C. - Document")
+		- [S.G.T.C. - Chrome Web Store](https://chromewebstore.google.com/detail/sgtc/gljkfiofalgeofkhcpeiiadljmnbjphd "https://chromewebstore.google.com/detail/sgtc/gljkfiofalgeofkhcpeiiadljmnbjphd")
+		- [S.G.T.C. - Document](./chrome-extension/send-generated-text-by-userscript-to-clipboard/ "https://from-es.github.io/chrome-extension/send-generated-text-by-userscript-to-clipboard/")
 	- Copy URL of All Tabs
-		- [Copy URL of All Tabs - Chrome Web Store](https://chromewebstore.google.com/detail/copy-url-of-all-tabs/glhbfaabeopieaeoojdlaboihfbdjhbm "Copy URL of All Tabs - Chrome Web Store")
+		- [Copy URL of All Tabs - Chrome Web Store](https://chromewebstore.google.com/detail/copy-url-of-all-tabs/glhbfaabeopieaeoojdlaboihfbdjhbm "https://chromewebstore.google.com/detail/copy-url-of-all-tabs/glhbfaabeopieaeoojdlaboihfbdjhb")
 	- Download Notifications
 	- Closed Tabs History
 - Fork
-	- [from-es/linkclump-ng - GitHub](https://github.com/from-es/linkclump-ng "GitHub - from-es/linkclump-ng: Google chrome extension that allows you to open multiple links at once.")
+	- Linkclump
+		- [from-es/linkclump-ng - GitHub](https://github.com/from-es/linkclump-ng "https://github.com/from-es/linkclump-ng")
+		- [from-es/linkclump-plus - GitHub](https://github.com/from-es/linkclump-plus "https://github.com/from-es/linkclump-plus")
