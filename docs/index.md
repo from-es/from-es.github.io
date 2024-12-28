@@ -16,7 +16,7 @@ footer : true
 head:
   - - meta
     - name: description
-      content: "Google Chrome用拡張機能のコード置き場兼サポート用サイト（仮）"
+      content: "Google Chrome用拡張機能のコード置き場兼サポート用サイト"
   - - meta
     - property: "og:type"
       content : "website"
@@ -31,7 +31,7 @@ head:
       content : "https://from-es.github.io"
   - - meta
     - property: "og:description"
-      content : "Google Chrome用拡張機能のコード置き場兼サポート用サイト（仮）"
+      content : "Google Chrome用拡張機能のコード置き場兼サポート用サイト"
   - - meta
     - property: "og:image"
       content : "https://from-es.github.io/src/img/logo-512x512.png"
@@ -43,7 +43,7 @@ head:
 
 ## About
 
-ここは私が製作したGoogle Chrome用拡張機能のコード置き場兼サポート用サイト（仮）です。私については[About](/about.html "About")を読んでください。
+ここは私が製作したGoogle Chrome用拡張機能のコード置き場兼サポート用サイトです。私については[About](/about.html "About")を読んでください。
 
 
 ## List
